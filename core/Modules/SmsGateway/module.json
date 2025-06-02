@@ -1,0 +1,40 @@
+{
+    "name": "SmsGateway",
+    "alias": "smsgateway",
+    "description": "SMS Gateway is an External Plugin developed by Core Team to enhance platform features",
+    "version": "2.0.0",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SmsGateway\\Providers\\SmsGatewayServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "nazmartMetaData": {
+        "plugin_type": "external",
+        "admin_settings": {
+            "show_admin_landlord": true,
+            "show_admin_tenant": true,
+            "menu_item": [
+                {
+                    "id" : "sms-gateway-menu",
+                    "label": "SMS Gateway",
+                    "route": "landlord.admin.sms.settings",
+                    "tenantRoute": "tenant.admin.sms.settings",
+                    "parent": null,
+                    "icon": "mdi mdi-cellphone-link",
+                    "permissions": "sms-gateway",
+                    "class": "plugin-menu"
+                },
+                {
+                    "id" : "sms-manage-index",
+                    "label": "SMS Settings",
+                    "route": "landlord.admin.sms.settings",
+                    "tenantRoute": "tenant.admin.sms.settings",
+                    "parent": "sms-gateway-menu"
+                }
+            ]
+        }
+    }
+}

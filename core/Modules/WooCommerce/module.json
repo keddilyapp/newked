@@ -1,0 +1,54 @@
+{
+    "name": "WooCommerce",
+    "alias": "woocommerce",
+    "version" : "1.0.2",
+    "description": "WooCommerce is an External Plugin developed by Core Team to enhance platform features",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\WooCommerce\\Providers\\WooCommerceServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "nazmartMetaData": {
+        "plugin_type": "external",
+        "admin_settings": {
+            "show_admin_landlord": false,
+            "show_admin_tenant": true,
+            "menu_item": [
+                {
+                    "id" : "woocommerce-manage-menu",
+                    "label": "WooCommerce",
+                    "route": "tenant.admin.woocommerce",
+                    "tenantRoute": "tenant.admin.woocommerce",
+                    "parent": null,
+                    "icon": "mdi mdi-wordpress",
+                    "permissions": "woocommerce",
+                    "class": "plugin-menu"
+                },
+                {
+                    "id" : "woocommerce-manage-index",
+                    "label": "WC Product List",
+                    "route": "tenant.admin.woocommerce",
+                    "tenantRoute": "tenant.admin.woocommerce",
+                    "parent": "woocommerce-manage-menu"
+                },
+                {
+                    "id" : "woocommerce-manage-settings-import",
+                    "label": "WC Import Settings",
+                    "route": "tenant.admin.woocommerce.settings.import",
+                    "tenantRoute": "tenant.admin.woocommerce.settings.import",
+                    "parent": "woocommerce-manage-menu"
+                },
+                {
+                    "id" : "woocommerce-manage-settings",
+                    "label": "WC Settings",
+                    "route": "tenant.admin.woocommerce.settings",
+                    "tenantRoute": "tenant.admin.woocommerce.settings",
+                    "parent": "woocommerce-manage-menu"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "name": "CpanelAutomation",
+    "alias": "cpanelautomation",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CpanelAutomation\\Providers\\CpanelAutomationServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "nazmartMetaData": {
+        "plugin_type": "external",
+        "admin_settings": {
+            "show_admin_landlord": true,
+            "show_admin_tenant": true,
+            "menu_item": [
+                {
+                    "id" : "cpanel-automation-menu",
+                    "label": "Cpanel Automation",
+                    "route": "landlord.admin.cpanel.automation.settings",
+                    "parent": null,
+                    "icon": "mdi mdi-cellphone-link",
+                    "permissions": "sms-gateway",
+                    "class": "plugin-menu"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "name": "ShippingPlugin",
+    "alias": "shippingplugin",
+    "version": "1.0.1",
+    "description": "Shipping Plugin is an External Plugin developed by Core Team to enhance platform features",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ShippingPlugin\\Providers\\ShippingPluginServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "nazmartMetaData": {
+        "plugin_type": "external",
+        "admin_settings": {
+            "show_admin_landlord": false,
+            "show_admin_tenant": true,
+            "menu_item": [
+                {
+                    "id" : "shipping-plugin-menu",
+                    "label": "Shipping Plugin",
+                    "route": "tenant.admin.shipping.plugin.settings",
+                    "tenantRoute": "tenant.admin.shipping.plugin.settings",
+                    "parent": null,
+                    "icon": "mdi mdi-truck-fast",
+                    "permissions": "shipping-plugin",
+                    "class": "plugin-menu"
+                },
+                {
+                    "id" : "shipping-index-menu",
+                    "label": "Shipping Dashboard",
+                    "route": "tenant.admin.shipping.plugin.index",
+                    "tenantRoute": "tenant.admin.shipping.plugin.index",
+                    "parent": "shipping-plugin-menu",
+                    "permissions": "shipping-plugin"
+                },
+                {
+                    "id" : "shipping-settings-menu",
+                    "label": "Shipping Settings",
+                    "route": "tenant.admin.shipping.plugin.settings",
+                    "tenantRoute": "tenant.admin.shipping.plugin.settings",
+                    "parent": "shipping-plugin-menu",
+                    "permissions": "shipping-plugin"
+                }
+            ]
+        },
+        "pageBuilderAddon": [
+            {
+                "addon": "Modules\\ShippingPlugin\\Http\\PageBuilder\\Addons\\ShippingTracker",
+                "landlord": false,
+                "tenant": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "name": "Pos",
+    "alias": "pos",
+    "version" : "1.2.3",
+    "description": "POS is an External Plugin developed by Core Team to enhance platform features",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Pos\\Providers\\PosServiceProvider"
+    ],
+    "files": [],
+    "nazmartMetaData": {
+        "plugin_type": "external",
+        "admin_settings": {
+            "show_admin_landlord": false,
+            "show_admin_tenant": true,
+            "menu_item": [
+                {
+                    "id" : "pos-manage",
+                    "label": "POS",
+                    "route": "landlord.admin.home",
+                    "tenantRoute": "tenant.admin.pos.view",
+                    "parent": null,
+                    "icon": "mdi mdi-point-of-sale",
+                    "permissions": ["pos", "pos-dashboard", "pos-settings", "pos-pwa-settings"],
+                    "class": "plugin-menu"
+                },
+                {
+                    "id" : "pos-dashboard",
+                    "label": "POS Manage",
+                    "route": "landlord.admin.home",
+                    "tenantRoute": "tenant.admin.pos.view",
+                    "parent": "pos-manage",
+                    "permissions": "pos-dashboard"
+                },
+                {
+                    "id" : "pos-settings",
+                    "label": "POS Settings",
+                    "route": "landlord.admin.home",
+                    "tenantRoute": "tenant.admin.pos.payment-gateway-settings",
+                    "parent": "pos-manage",
+                    "permissions": "pos-settings"
+                },
+                {
+                    "id" : "pwa-settings",
+                    "label": "PWA Settings",
+                    "route": "landlord.admin.home",
+                    "tenantRoute": "tenant.admin.pos.pwa-settings",
+                    "parent": "pos-manage",
+                    "permissions": "pos-pwa-settings"
+                }
+            ]
+        }
+    }
+}

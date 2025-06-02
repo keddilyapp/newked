@@ -1,0 +1,43 @@
+{
+    "name":"Default",
+    "slug":"default",
+    "description":"default theme ui",
+    "author":"Nazmul",
+    "version":"1.0.0",
+    "status":true,
+    "headerHook": {
+        "styles": [
+        ],
+        "dark_mode" : [
+        ],
+        "rtl_style":[
+        ],
+        "scripts":[
+
+        ],
+        "blades":[
+
+        ]
+    }
+,
+    "footerHook":{
+        "loadCoreScript":{
+            "odometer":false,
+            "viewport.jquery":false,
+            "main":false
+        },
+        "dark_mode" : [],
+        "rtl_style":[],
+        "styles":[],
+        "scripts":[
+        ],
+        "blades":[
+
+        ]
+    },
+    "overrideExistingViews" :  {
+
+    }
+
+
+}
